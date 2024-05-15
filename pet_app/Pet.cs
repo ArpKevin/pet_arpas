@@ -17,7 +17,7 @@ namespace pet_app
             Name = name;
             Age = age;
             Color = color;
-            Image = $@"..\..\..\Images\{source}";
+            Image = source;
         }
     }
 }

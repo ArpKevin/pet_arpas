@@ -33,5 +33,7 @@
         <ListBox x:Name="kedvencek" Margin="510,10,100,124"></ListBox>
         <Button x:Name="btn_kedvencek" Content="Kedvenc kiválasztása" HorizontalAlignment="Left" Margin="25,327,0,0" VerticalAlignment="Top" Padding="5,5,5,5" Height="53" Width="206" FontSize="18" Click="btn_kedvencek_Click"/>
         <Image x:Name="kep" HorizontalAlignment="Left" Height="100" Margin="312,0,0,0" VerticalAlignment="Center" Width="100"/>
+        <Image x:Name="asd" HorizontalAlignment="Left" Height="100" Margin="312,267,0,0" VerticalAlignment="Top" Width="100" Source="Images/hal.jfif"/>
+        <Label x:Name="lblbl" Content="Label" HorizontalAlignment="Left" Margin="280,127,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

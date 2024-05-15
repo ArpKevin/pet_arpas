@@ -55,9 +55,12 @@ namespace pet_app
                 attributeTextBlock.Text = $"Megnevezés: {selectedItem.Name}\n" +
                                           $"Életkor: {selectedItem.Age} \n" +
                                           $"Szín: {selectedItem.Color}";
-                //Image finalImage = new Image();
-                //finalImage.Source = new BitmapImage(
-                //new Uri($@"..\..\..\Images{selectedItem.Image}"));
+
+
+                string imagePath = @$"..\Images\{selectedItem.Image}";
+
+
+                if (File.Exists(imagePath)) kep.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative)); else kep.Source = null;
             }
         }
         private void btn_torol_Click(object sender, RoutedEventArgs e)
