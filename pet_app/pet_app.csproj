@@ -9,7 +9,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\hal.jfif" />
+    <None Remove="Images\horcsog.jfif" />
+    <None Remove="Images\kigyo.jfif" />
+    <None Remove="Images\lepke.jfif" />
+    <None Remove="Images\macska.jfif" />
+    <None Remove="Images\nyul.jfif" />
+    <None Remove="Images\papagaj.jfif" />
+    <None Remove="Images\roka.jfif" />
+    <None Remove="Images\teknos.jfif" />
+    <None Remove="Images\tengerimalac.jfif" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="src\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\hal.jfif" />
+    <Resource Include="Images\horcsog.jfif" />
+    <Resource Include="Images\kigyo.jfif" />
+    <Resource Include="Images\lepke.jfif" />
+    <Resource Include="Images\macska.jfif" />
+    <Resource Include="Images\nyul.jfif" />
+    <Resource Include="Images\papagaj.jfif" />
+    <Resource Include="Images\roka.jfif" />
+    <Resource Include="Images\teknos.jfif" />
+    <Resource Include="Images\tengerimalac.jfif" />
   </ItemGroup>
 
 </Project>

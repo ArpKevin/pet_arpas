@@ -57,8 +57,7 @@ namespace pet_app
                                           $"Szín: {selectedItem.Color}";
 
 
-                string imagePath = @$"..\Images\{selectedItem.Image}";
-
+                string imagePath = @$"..\..\..\Images\{selectedItem.Image}";
 
                 if (File.Exists(imagePath)) kep.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative)); else kep.Source = null;
             }
@@ -75,17 +74,17 @@ namespace pet_app
 
         private void btn_kedvencek_Click(object sender, RoutedEventArgs e)
         {
-            string kedvenc = "";
             if (petek.SelectedItem != null)
             {
-                var selectedListBoxItem = petek.SelectedItem;
+                //adatkötés nélkül:
+                //ez is jó:
+                //kedvencek.Items.Add((Pet)petek.SelectedItem); //ToString override miatt jó
+                //ez is jó:
+                //var nev = ((Pet)petek.SelectedItem).Name;
+                //kedvencek.Items.Add(nev);
 
-                if (selectedListBoxItem is ListBoxItem listBoxItem)
-                    kedvenc = listBoxItem.Content.ToString();
-                else
-                    kedvenc = selectedListBoxItem.ToString();
-
-                kedvencek.Items.Add(kedvenc);
+                //adatkötéssel:
+                kedvencek.Items.Add(petek.SelectedItem);
             }
         }
     }

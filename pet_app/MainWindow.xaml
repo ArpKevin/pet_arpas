@@ -19,6 +19,10 @@
         </Style>
     </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="779*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
         <ListBox x:Name="petek" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="200"
                  ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
             <ListBox.ItemTemplate>
@@ -27,13 +31,21 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBlock x:Name="attributeTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,10,0,0"/>
+        <!--<StackPanel Margin="220,10,0,0" Grid.ColumnSpan="2">
+            <TextBlock x:Name="attributeTextBlock"/>
+            <Image x:Name="kep" HorizontalAlignment="Left" Height="100" Width="100"/>
+        </StackPanel>-->
+        <Grid Margin="220,10,0,0" Width="280" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="attributeTextBlock" Grid.Column="0"/>
+            <Image x:Name="kep" Grid.Column="1" Height="100" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        </Grid>
         <Button x:Name="btn_torol" Content="Törlés" HorizontalAlignment="Left" Margin="550,327,0,0" VerticalAlignment="Top" Padding="5,5,5,5" Height="53" Width="110" FontSize="18" Click="btn_torol_Click"/>
         <Label x:Name="lblError" HorizontalAlignment="Left" Margin="446,29,0,0" VerticalAlignment="Top" Width="318" Foreground="Red" Height="42" FontSize="14" HorizontalContentAlignment="Center" Visibility="Collapsed"/>
-        <ListBox x:Name="kedvencek" Margin="510,10,100,124"></ListBox>
+        <ListBox x:Name="kedvencek" Margin="510,10,79,124"></ListBox>
         <Button x:Name="btn_kedvencek" Content="Kedvenc kiválasztása" HorizontalAlignment="Left" Margin="25,327,0,0" VerticalAlignment="Top" Padding="5,5,5,5" Height="53" Width="206" FontSize="18" Click="btn_kedvencek_Click"/>
-        <Image x:Name="kep" HorizontalAlignment="Left" Height="100" Margin="312,0,0,0" VerticalAlignment="Center" Width="100"/>
-        <Image x:Name="asd" HorizontalAlignment="Left" Height="100" Margin="312,267,0,0" VerticalAlignment="Top" Width="100" Source="Images/hal.jfif"/>
-        <Label x:Name="lblbl" Content="Label" HorizontalAlignment="Left" Margin="280,127,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
